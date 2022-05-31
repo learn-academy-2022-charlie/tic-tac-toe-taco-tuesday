@@ -6,6 +6,11 @@ This project will challenge your knowledge of React but should also be an exerci
 
 ### 📚 User Stories
 - As a user, I can see a 3x3 grid game board on the page.
+    - Create a div element to act as the game board "board"
+    - Used the .map() method on the squares array to create a square component for each element in the array
+    - Style "board" appropiately to fit 3 squares on each row by adjusting 620px and each square 200px
+    - Center board and squares using flexbox
+    - branch: grid
 - As a user, I can click on a square to mark it.
 - As a user, my partner can click on a square after me and see their mark.
 - As a user, I can't click on a square that has already been marked.

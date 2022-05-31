@@ -13,8 +13,14 @@ class App extends Component {
   render() {
     return(
       <>
-        <h1>Tic Tac Toe</h1>
-        <Square />
+        <h1 id="title">Tic Tac Toe</h1>
+        <div id="board">
+          {this.state.squares.map((value, index) => {
+            return(
+              <Square />
+            )
+          })}
+        </div>
       </>
     )
   }
