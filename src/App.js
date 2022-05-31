@@ -13,15 +13,19 @@ class App extends Component {
 
   handleGameLogic = (index) => {
     const { squares, isX } = this.state
-    if(isX){
-      squares[index] = "X"
-      this.setState({isX: false})
+    if(squares[index] === "X" || squares[index] === "O") {
+      //do nothing
     } else {
-      squares[index] = "O"
-      this.setState({isX: true})
+      if(isX){
+        squares[index] = "X"
+        this.setState({isX: false})
+      } else {
+        squares[index] = "O"
+        this.setState({isX: true})
+      } 
+      this.setState({squares: squares})
     }
-    this.setState({squares: squares})
-  }
+   }
 
   render() {
     return(
