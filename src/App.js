@@ -6,8 +6,21 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      squares: [null, null, null, null, null, null, null, null, null]
+      squares: [null, null, null, null, null, null, null, null, null],
+      isX: true
     }
+  }
+
+  handleGameLogic = (index) => {
+    const { squares, isX } = this.state
+    if(isX){
+      squares[index] = "X"
+      this.setState({isX: false})
+    } else {
+      squares[index] = "O"
+      this.setState({isX: true})
+    }
+    this.setState({squares: squares})
   }
 
   render() {
@@ -17,7 +30,12 @@ class App extends Component {
         <div id="board">
           {this.state.squares.map((value, index) => {
             return(
-              <Square />
+              <Square 
+                value={value}
+                index={index}
+                key={index}
+                handleGameLogic={this.handleGameLogic}
+              />
             )
           })}
         </div>
