@@ -30,13 +30,32 @@ This project will challenge your knowledge of React but should also be an exerci
                 - Update the index with a "O"
                 - Set state of isX to true
 - As a user, I can't click on a square that has already been marked.
+    - If the index of the square is either X or O; Do nothing
 - As a user, when either my partner or I win the game (3 squares in a row: horizontally, vertically, or diagonally) I can see a notice telling me which player won.
+    - Create a method called checkWinCondition
+    - Use conditional statements to check if index are equal to each other from left to right, top to bottom, and diagonal
+        - If they are display an alert and change the state of winnerAnnouncement including X or O
 - As a user, I can't continue playing the game after the game has been won.
+    - Create a conditional to determine whether a winner has been announced and state has been changed
+    - If winner, do nothing
+    - Else, allows player to place X or O on squares
 - As a user, if there are no more squares available, I can see a notice telling me that the game has ended.
+    - Create a method called noMoreEmptySquares to determine if there are any null values within the array
+        - If there are null values within the array, do Nothin
+        - Else, this dictates that there are no more null values meaning all the squares have been used
+            - Set an alert to announce a Tie
+            - Change state of winnerAnnouncement to display that there is no winner
 - As a user, I can click on a restart button that will clear the game board.
+    - Create a button
+        - Use Conditional rendering to display the reset button
+    - Add onClick attribute
+    - Tie method of gameReset into this button
+    - gameReset
+        - Reset the states to their original values
 
 ### 🏔 Stretch Goals
 - As a user, I can see a notification that informs me whether it is currently my partner or my turn.
+    - Use a ternary operator to display whos turn it is based
 - As a user, I can choose my marker from a predetermined list (X, O, a color, an emoji, etc...).
 
 ### 🛠 Resources
