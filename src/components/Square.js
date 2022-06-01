@@ -12,7 +12,8 @@ class Square extends Component {
         <div 
         className="square"
         onClick={this.handleClick}
-        >{this.props.value}
+        >
+          <p className="mark">{this.props.value}</p>
         </div>
       </>
     )
